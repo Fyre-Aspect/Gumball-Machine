@@ -1,0 +1,72 @@
+:Author: fyre_aspect
+:Email: {AuthorEmail}
+:Date: 28/01/2024
+:Revision: v1.0
+:License: Public Domain
+
+= Project: Gumball Drop Machine with 3D Printed CAD
+
+This project is a fully functional **Gumball Drop Machine** built using **Arduino** and **3D printed mechanical components**. It is designed to dispense gumballs on activation, using servos and sensors to ensure reliable operation.
+
+The mechanical housing is designed in CAD and 3D printed to allow precise part fitting and durability. The electronic system is controlled by an Arduino microcontroller, programmed to respond to user input or a coin sensor (optional), to activate the gumball drop mechanism.
+
+== Step 1: Installation
+
+1. Download the Arduino sketch and 3D CAD files from the repository.
+2. Open the `.ino` sketch file in the Arduino IDE.
+3. Print the required 3D parts using a 3D printer.
+4. Prepare the necessary electronics listed in the BOM section.
+5. Assemble the components as described in the circuit and mechanical layout.
+
+== Step 2: Assemble the circuit
+
+Assemble the electronic circuit according to the `layout.png` provided. Connect the components to the Arduino as per the diagram.
+
+Typical connections:
+- Servo motor signal → Digital Pin 9  
+- IR sensor or button → Digital Pin 2  
+- VCC → 5V  
+- GND → GND
+
+== Step 3: Load the code
+
+1. Connect your Arduino to your computer via USB.
+2. Upload the `sketch123.ino` file to your board using the Arduino IDE.
+3. Once uploaded, the machine will be ready to operate on trigger input.
+
+=== Folder structure
+
+....
+ gumball_drop_machine/           => Arduino sketch folder
+ ├── sketch123.ino               => Main Arduino code
+ ├── layout.png                  => Circuit layout image
+ ├── mechanics.stl               => 3D printable mechanical part (example)
+ ├── gumball_housing.stl         => Main body 3D model
+ └── ReadMe.adoc                 => This file
+....
+
+=== License
+
+This project is released under a Public Domain License.
+
+=== Contributing
+
+To contribute to this project please contact fyre_aspect  
+https://id.arduino.cc/fyre_aspect
+
+=== BOM
+
+|===
+| ID | Part name          | Part number  | Quantity
+| S1 | Micro Servo (SG90) | SG90         | 1
+| IR | IR Sensor Module   | IR-001       | 1
+| B1 | Push Button        | BTN-123      | 1
+| M1 | 3D Printed Housing | Custom CAD   | 1 set
+| A1 | Arduino Uno/Nano   | ABX00066     | 1
+|===
+
+=== Help
+
+This document is written in the _AsciiDoc_ format, a markup language to describe documents.  
+If you need help you can search the http://www.methods.co.nz/asciidoc[AsciiDoc homepage]  
+or consult the http://powerman.name/doc/asciidoc[AsciiDoc cheatsheet].
